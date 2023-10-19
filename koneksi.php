@@ -7,6 +7,7 @@ $db="inventory_buku";
 
 $kon = mysqli_connect($host, $user, $password, $db);
 if (!$kon) {
-    die("Koneksi gagal: ".mysqli_connect_error())
+    die("Koneksi gagal: ".mysqli_connect_error());
 }
+?>
 
