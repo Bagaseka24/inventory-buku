@@ -10,7 +10,7 @@
         //mencegah input yang tidak sesuai
         include("koneksi.php");
 
-        function input($data); {
+        function input($data) {
             $data = trims($data);
             $data = stripslashes($data);
             $data = htmlspecialchars($data);
