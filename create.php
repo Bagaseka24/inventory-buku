@@ -30,11 +30,11 @@
             $sql = "INSERT INTO `buku`(`namabuku`, `jenisbuku`, `tahunterbit`, `pengarang`, `penerbit`, `ISBN`) VALUES ('$namabuku','$jenisbuku','$tahunterbit','$pengarang','$penerbit','$ISBN')";
 
             //eksekusi query sql diatas
-            $result = mysql_query($kon, $sql);
+            $result = mysqli_query($kon, $sql);
 
             //mengecek apakah query diatas berhasil dieksekusi
             if ($result) {
-                header(Location:index.php);
+                header("Location:index.php");
             } else {
                 echo"<div class='alert alert-danger'> Data Gagal disimpan.</div>"; 
             }
