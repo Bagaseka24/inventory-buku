@@ -35,7 +35,7 @@
                 
                 <div class="form-group">
                   <label>Nama Buku</label>
-                  <input type="text" name="namabuku" value="<?php echo $row['namabuku'] ?>" placeholder="Masukkan Nama Buku" class="form-control”>
+                  <input type="text" name="namabuku" value="<?php echo $row['namabuku'] ?>" placeholder="Masukkan Nama Buku" class="form-control">
                   <input type="hidden" name="idbuku" value="<?php echo $row['idbuku'] ?>">
                 </div>
 
