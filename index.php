@@ -59,8 +59,8 @@
                         <td><?php echo $data["penerbit"]; ?></td>
                         <td><?php echo $data["ISBN"]; ?></td>
                         <td>
-                            <a href="update.php?idbuku=<?php echo htmlspecialchars($data['$idbuku']); ?>" clas="btn btn-warning" role="button">Update</a>
-                            <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?idbuku=<?php echo $data['$idbuku']; ?>" class="btn btn-danger" role="button">Delete</a>
+                            <a href="update.php?idbuku=<?php echo htmlspecialchars($data['idbuku']); ?>" class="btn btn-warning" role="button">Update</a>
+                            <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?idbuku<? echo $data['idbuku']; ?>)" class="btn btn-warning" role="button">Delete</a>
                         </td>
                     </tr>
                 </tbody>
