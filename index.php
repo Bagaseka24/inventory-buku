@@ -49,8 +49,8 @@
                       <td><?php echo $row['penerbit'] ?></td>
                       <td><?php echo $row['isbn'] ?></td>
                       <td class="text-center">
-                        <a href="edit-siswa.php?id=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-primary">EDIT</a>
-                        <a href="hapus-siswa.php?id=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="edit-buku.php?id=<?php echo $row['idbuku'] ?>" class="btn btn-sm btn-primary">EDIT</a>
+                        <a href="hapus-buku.php?id=<?php echo $row['idbuku'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
                       </td>
                   </tr>
 
