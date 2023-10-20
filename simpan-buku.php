@@ -4,15 +4,19 @@
 include('koneksi.php');
 
 //get data dari form
-$nisn           = $_POST['nisn'];
-$nama_lengkap = $_POST['nama_lengkap'];
-$alamat       = $_POST['alamat'];
+$idbuku         = $_POST['idsiswa'];
+$namabuku       = $_POST['namabuku'];
+$jenisbuku      = $_POST['jenisbuku'];
+$tahunterbit    = $_POST['tahunterbit'];
+$pengarang      = $_POST['pengarang'];
+$penerbit       = $_POST['penerbit'];
+$isbn           = $_POST['isbn'];
 
 //query insert data ke dalam database
-$query = "INSERT INTO tbl_siswa (nisn, nama_lengkap, alamat) VALUES ('$nisn', '$nama_lengkap', '$alamat')";
+$query = "INSERT INTO `buku`(`namabuku`, `jenisbuku`, `tahunterbit`, `pengarang`, `penerbit`, `isbn`) VALUES ('$namabuku','$jenisbuku','$tahunterbit','$pengarang','$penerbit','$isbn')";
 
 //kondisi pengecekan apakah data berhasil dimasukkan atau tidak
-if($connection->query($query)) {
+if($kon->query($query)) {
 
     //redirect ke halaman index.php 
     header("location: index.php");
