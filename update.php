@@ -1,43 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Form Tambah Data Buku</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container">
-        <?php
-        //koneksi ke database
-        include("koneksi.php");
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Tambah Data Buku</title>
+  </head>
 
-        function input( $data ) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
+  <body>
 
-        // mengecek nilai yang dikirim menggunakan method GET dengan nama idbuku
-        if (isset($_GET['idbuku'])) {
-            $idbuku = input($_GET["idbuku"]);
+    <div class="container" style="margin-top: 80px">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="card">
+            <div class="card-header">
+              Tambah Buku
+            </div>
+            <div class="card-body">
+              <form action="simpan-buku.php" method="POST">
+                
+                <div class="form-group">
+                  <label>Nama Buku</label>
+                  <input type="text" name="namabuku" placeholder="Masukkan Nama Buku" class="form-control">
+                </div>
 
-            $sql = "SELECT * FROM `buku` WHERE idbuku=$idbuku";
-            $result = mysql_query($kon, $sql);
-            $data = mysql_fetch_array($result);
-        }
+                <div class="form-group">
+                  <label>Kategori Buku</label>
+                  <input type="text" name="jenisbuku" placeholder="Masukkan Kategori" class="form-control">
+                </div>
 
-        //mengecek apakah ada kiriman dari method POST
-        if ($_SERVER["REQUST_METHOD"] == "POST") {
-            $idbuku = htmlspecialchars($_POST["idbuku"]);
-            $namabuku = htmlspecialchars($_POST["namabuku"]);
-            $jenisbuku = htmlspecialchars($_POST["jenisbuku"]);
-            $tahuterbit = htmlspecialchars($_POST["tahunterbit"]);
-            $pengarang = htmlspecialchars($_POST["pengarang"]);
-            $penerbit = htmlspecialchars($_POST["penerbit"]);
-            $ISBN = htmlspecialchars($_POST["ISBN"]);
-        }
+                <div class="form-group">
+                  <label>Tahun Terbit</label>
+                  <input type="text" name="tahunterbit" placeholder="Masukkan Tahun Terbit" class="form-control">
+                </div>
 
-        ?>
+                <div class="form-group">
+                  <label>Pengarang</label>
+                  <input type="text" name="pengarang" placeholder="Masukkan Pengarang" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Penerbit</label>
+                  <input type="text" name="penerbit" placeholder="Masukkan Penerbit" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>ISBN</label>
+                  <input type="text" name="isbn" placeholder="Masukkan ISBN" class="form-control">
+                </div>
+                
+                <button type="submit" class="btn btn-success">SIMPAN</button>
+                <button type="reset" class="btn btn-warning">RESET</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+
+    
+  </body>
 </html>
+
+
+
+
