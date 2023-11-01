@@ -1,6 +1,6 @@
 <?php
 
-$host="localhost";
+$host="localhost"; 
 $user="root";
 $password="";
 $db="inventory_buku";
